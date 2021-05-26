@@ -1,0 +1,420 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16LF18456 ]
+[d frameptr 6 ]
+"77 /home/d/MPLABXProjects/Sumo_Beta.X/main.c
+[e E12200 . `uc
+STATE_SEARCH 0
+STATE_EDGE_TURN_MIN 1
+STATE_EDGE_TURN_SCANNING 2
+STATE_EDGE_RUNAWAY 3
+STATE_CHASE 4
+STATE_STOP 5
+]
+"10 /opt/microchip/xc8/v2.05/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.05/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"3 /home/d/MPLABXProjects/Sumo_Beta.X/adc.c
+[v _adc_init adc_init `(v  1 e 1 0 ]
+"11
+[v _adc_meas_batt adc_meas_batt `(v  1 e 1 0 ]
+"30
+[v _adc_convert adc_convert `(v  1 e 1 0 ]
+[v i1_adc_convert adc_convert `(v  1 e 1 0 ]
+"3 /home/d/MPLABXProjects/Sumo_Beta.X/ir_sens.c
+[v _ir_init ir_init `(v  1 e 1 0 ]
+"83 /home/d/MPLABXProjects/Sumo_Beta.X/main.c
+[v _btn_wait btn_wait `(v  1 e 1 0 ]
+"120
+[v _isr isr `II(v  1 e 1 0 ]
+"222
+[v _main main `(v  1 e 1 0 ]
+"4 /home/d/MPLABXProjects/Sumo_Beta.X/motor.c
+[v _mot_init mot_init `(v  1 e 1 0 ]
+"33
+[v _mot_brake mot_brake `(v  1 e 1 0 ]
+"40
+[v _mot_coast mot_coast `(v  1 e 1 0 ]
+"6 /home/d/MPLABXProjects/Sumo_Beta.X/nco.c
+[v _nco_init nco_init `(v  1 e 1 0 ]
+"13
+[v _nco_start nco_start `(v  1 e 1 0 ]
+"17
+[v _nco_stop nco_stop `(v  1 e 1 0 ]
+"22
+[v _nco_freq nco_freq `(v  1 e 1 0 ]
+"27
+[v _nco_play_short nco_play_short `(v  1 e 1 0 ]
+"36
+[v _nco_play_startup nco_play_startup `(v  1 e 1 0 ]
+"51
+[v _nco_play_alarm1 nco_play_alarm1 `(v  1 e 1 0 ]
+"67
+[v _nco_play_alarm2 nco_play_alarm2 `(v  1 e 1 0 ]
+"80
+[v _nco_play_low nco_play_low `(v  1 e 1 0 ]
+"87
+[v _nco_play_high nco_play_high `(v  1 e 1 0 ]
+"14 /home/d/MPLABXProjects/Sumo_Beta.X/serial.c
+[v _serial_ch serial_ch `(v  1 e 1 0 ]
+"4 /home/d/MPLABXProjects/Sumo_Beta.X/sumo.c
+[v _pin_init pin_init `(v  1 e 1 0 ]
+"30
+[v _btn_ioc btn_ioc `(v  1 e 1 0 ]
+"3 /home/d/MPLABXProjects/Sumo_Beta.X/timer.c
+[v _tmr0_init tmr0_init `(v  1 e 1 0 ]
+"11
+[v _tmr1_init tmr1_init `(v  1 e 1 0 ]
+"413 /opt/microchip/xc8/v2.05/pic/include/pic16lf18456.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"653
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+"715
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"777
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"860
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"922
+[v _LATB LATB `VEuc  1 e 1 @25 ]
+"984
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"3429
+[v _ADRESH ADRESH `VEuc  1 e 1 @158 ]
+"3549
+[v _ADPCH ADPCH `VEuc  1 e 1 @159 ]
+"3607
+[v _ADACQ ADACQ `VEus  1 e 2 @268 ]
+"3614
+[v _ADACQL ADACQL `VEuc  1 e 1 @268 ]
+"4113
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @273 ]
+"4788
+[v _ADREF ADREF `VEuc  1 e 1 @278 ]
+"5020
+[v _ADCLK ADCLK `VEuc  1 e 1 @280 ]
+"5178
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"5239
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"5309
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"5363
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+"5543
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+"5723
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"7855
+[v _TMR1L TMR1L `VEuc  1 e 1 @524 ]
+"7925
+[v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
+"7995
+[v _T1CON T1CON `VEuc  1 e 1 @526 ]
+"8570
+[v _TMR1CLK TMR1CLK `VEuc  1 e 1 @529 ]
+"10483
+[v _CCPTMRS0 CCPTMRS0 `VEuc  1 e 1 @542 ]
+"10607
+[v _T2PR T2PR `VEuc  1 e 1 @653 ]
+"10661
+[v _T2CON T2CON `VEuc  1 e 1 @654 ]
+"10935
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @656 ]
+"11161
+[v _T4PR T4PR `VEuc  1 e 1 @659 ]
+"11215
+[v _T4CON T4CON `VEuc  1 e 1 @660 ]
+"11489
+[v _T4CLKCON T4CLKCON `VEuc  1 e 1 @662 ]
+"12249
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @780 ]
+"12269
+[v _CCPR1H CCPR1H `VEuc  1 e 1 @781 ]
+"12289
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @782 ]
+"12491
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @784 ]
+"12511
+[v _CCPR2H CCPR2H `VEuc  1 e 1 @785 ]
+"12531
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @786 ]
+"12733
+[v _CCPR3L CCPR3L `VEuc  1 e 1 @788 ]
+"12753
+[v _CCPR3H CCPR3H `VEuc  1 e 1 @789 ]
+"12773
+[v _CCP3CON CCP3CON `VEuc  1 e 1 @790 ]
+"13051
+[v _CCPR4L CCPR4L `VEuc  1 e 1 @792 ]
+"13071
+[v _CCPR4H CCPR4H `VEuc  1 e 1 @793 ]
+"13091
+[v _CCP4CON CCP4CON `VEuc  1 e 1 @794 ]
+"13687
+[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @908 ]
+"13753
+[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @909 ]
+"13923
+[v _PWM6CON PWM6CON `VEuc  1 e 1 @910 ]
+"13986
+[v _PWM7DCL PWM7DCL `VEuc  1 e 1 @912 ]
+"14052
+[v _PWM7DCH PWM7DCH `VEuc  1 e 1 @913 ]
+"14222
+[v _PWM7CON PWM7CON `VEuc  1 e 1 @914 ]
+"18874
+[v _NCO1INCL NCO1INCL `VEuc  1 e 1 @1423 ]
+"19002
+[v _NCO1INCH NCO1INCH `VEuc  1 e 1 @1424 ]
+"19130
+[v _NCO1INCU NCO1INCU `VEuc  1 e 1 @1425 ]
+"19210
+[v _NCO1CON NCO1CON `VEuc  1 e 1 @1426 ]
+"19278
+[v _NCO1CLK NCO1CLK `VEuc  1 e 1 @1427 ]
+"19548
+[v _TMR0H TMR0H `VEuc  1 e 1 @1437 ]
+"19802
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @1438 ]
+"19900
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @1439 ]
+"22417
+[v _PIR0 PIR0 `VEuc  1 e 1 @1804 ]
+"22450
+[v _PIR1 PIR1 `VEuc  1 e 1 @1805 ]
+"22584
+[v _PIR4 PIR4 `VEuc  1 e 1 @1808 ]
+"22830
+[v _PIE0 PIE0 `VEuc  1 e 1 @1814 ]
+"22863
+[v _PIE1 PIE1 `VEuc  1 e 1 @1815 ]
+"22997
+[v _PIE4 PIE4 `VEuc  1 e 1 @1818 ]
+"24991
+[v _CLKRCON CLKRCON `VEuc  1 e 1 @2197 ]
+"25488
+[v _FVRCON FVRCON `VEuc  1 e 1 @2316 ]
+"33652
+[v _RA6PPS RA6PPS `VEuc  1 e 1 @7958 ]
+"33884
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @7962 ]
+"33942
+[v _RB3PPS RB3PPS `VEuc  1 e 1 @7963 ]
+"34232
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @7968 ]
+"34290
+[v _RC1PPS RC1PPS `VEuc  1 e 1 @7969 ]
+"34464
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @7972 ]
+"34522
+[v _RC5PPS RC5PPS `VEuc  1 e 1 @7973 ]
+"34580
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @7974 ]
+"34696
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"34758
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"34882
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"35192
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"35378
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"35564
+[v _IOCBN IOCBN `VEuc  1 e 1 @8009 ]
+"35626
+[v _IOCBF IOCBF `VEuc  1 e 1 @8010 ]
+"35688
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"35874
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"37107
+"37107
+[v _ADIF ADIF `VEb  1 e 0 @14440 ]
+"39042
+[v _GO_nDONE GO_nDONE `VEb  1 e 0 @2184 ]
+"39486
+[v _IOCIF IOCIF `VEb  1 e 0 @14436 ]
+"39513
+[v _LATA6 LATA6 `VEb  1 e 0 @198 ]
+"39534
+[v _LATB5 LATB5 `VEb  1 e 0 @205 ]
+"39552
+[v _LATC3 LATC3 `VEb  1 e 0 @211 ]
+"41406
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"41637
+[v _RB4 RB4 `VEb  1 e 0 @108 ]
+"43887
+[v _TMR0IF TMR0IF `VEb  1 e 0 @14437 ]
+"43950
+[v _TMR1IF TMR1IF `VEb  1 e 0 @14464 ]
+"44298
+[v _TX1IF TX1IF `VEb  1 e 0 @14460 ]
+"72 /home/d/MPLABXProjects/Sumo_Beta.X/main.c
+[v _cny_l cny_l `VEb  1 e 0 0 ]
+[v _cny_r cny_r `VEb  1 e 0 0 ]
+"73
+[v _btn_int btn_int `VEb  1 e 0 0 ]
+"74
+[v _adc_step adc_step `b  1 e 0 0 ]
+"75
+[v _alarm_cny alarm_cny `VEb  1 e 0 0 ]
+[v _alarm_ir alarm_ir `VEb  1 e 0 0 ]
+[v _state_update state_update `VEb  1 e 0 0 ]
+"76
+[v _ir_step ir_step `uc  1 e 1 0 ]
+"77
+[v _state state `VEuc  1 e 1 0 ]
+"78
+[v _ir_l ir_l `VEuc  1 e 1 0 ]
+[v _ir_r ir_r `VEuc  1 e 1 0 ]
+"79
+[v _state_timer state_timer `VEuc  1 e 1 0 ]
+"81
+[v _start_alt start_alt `b  1 e 0 0 ]
+"222
+[v _main main `(v  1 e 1 0 ]
+{
+"429
+[v main@i_182 i `uc  1 a 1 2 ]
+"247
+[v main@i i `uc  1 a 1 3 ]
+"489
+} 0
+"11 /home/d/MPLABXProjects/Sumo_Beta.X/timer.c
+[v _tmr1_init tmr1_init `(v  1 e 1 0 ]
+{
+"16
+} 0
+"3
+[v _tmr0_init tmr0_init `(v  1 e 1 0 ]
+{
+"9
+} 0
+"4 /home/d/MPLABXProjects/Sumo_Beta.X/sumo.c
+[v _pin_init pin_init `(v  1 e 1 0 ]
+{
+"28
+} 0
+"36 /home/d/MPLABXProjects/Sumo_Beta.X/nco.c
+[v _nco_play_startup nco_play_startup `(v  1 e 1 0 ]
+{
+"49
+} 0
+"27
+[v _nco_play_short nco_play_short `(v  1 e 1 0 ]
+{
+"34
+} 0
+"67
+[v _nco_play_alarm2 nco_play_alarm2 `(v  1 e 1 0 ]
+{
+[v nco_play_alarm2@count count `uc  1 a 1 wreg ]
+[v nco_play_alarm2@count count `uc  1 a 1 wreg ]
+[v nco_play_alarm2@count count `uc  1 a 1 6 ]
+"78
+} 0
+"51
+[v _nco_play_alarm1 nco_play_alarm1 `(v  1 e 1 0 ]
+{
+[v nco_play_alarm1@count count `uc  1 a 1 wreg ]
+"56
+[v nco_play_alarm1@i i `uc  1 a 1 7 ]
+"52
+[v nco_play_alarm1@freq freq `us  1 a 2 8 ]
+"51
+[v nco_play_alarm1@count count `uc  1 a 1 wreg ]
+"54
+[v nco_play_alarm1@count count `uc  1 a 1 6 ]
+"65
+} 0
+"6
+[v _nco_init nco_init `(v  1 e 1 0 ]
+{
+"11
+} 0
+"4 /home/d/MPLABXProjects/Sumo_Beta.X/motor.c
+[v _mot_init mot_init `(v  1 e 1 0 ]
+{
+"31
+} 0
+"3 /home/d/MPLABXProjects/Sumo_Beta.X/ir_sens.c
+[v _ir_init ir_init `(v  1 e 1 0 ]
+{
+"19
+} 0
+"83 /home/d/MPLABXProjects/Sumo_Beta.X/main.c
+[v _btn_wait btn_wait `(v  1 e 1 0 ]
+{
+"118
+} 0
+"17 /home/d/MPLABXProjects/Sumo_Beta.X/nco.c
+[v _nco_stop nco_stop `(v  1 e 1 0 ]
+{
+"20
+} 0
+"13
+[v _nco_start nco_start `(v  1 e 1 0 ]
+{
+"15
+} 0
+"22
+[v _nco_freq nco_freq `(v  1 e 1 0 ]
+{
+[v nco_freq@freq freq `us  1 p 2 2 ]
+"25
+} 0
+"40 /home/d/MPLABXProjects/Sumo_Beta.X/motor.c
+[v _mot_coast mot_coast `(v  1 e 1 0 ]
+{
+"45
+} 0
+"33
+[v _mot_brake mot_brake `(v  1 e 1 0 ]
+{
+"38
+} 0
+"30 /home/d/MPLABXProjects/Sumo_Beta.X/sumo.c
+[v _btn_ioc btn_ioc `(v  1 e 1 0 ]
+{
+"38
+} 0
+"11 /home/d/MPLABXProjects/Sumo_Beta.X/adc.c
+[v _adc_meas_batt adc_meas_batt `(v  1 e 1 0 ]
+{
+"19
+} 0
+"3
+[v _adc_init adc_init `(v  1 e 1 0 ]
+{
+"9
+} 0
+"30
+[v _adc_convert adc_convert `(v  1 e 1 0 ]
+{
+[v adc_convert@channel channel `uc  1 a 1 wreg ]
+[v adc_convert@channel channel `uc  1 a 1 wreg ]
+[v adc_convert@channel channel `uc  1 a 1 2 ]
+"33
+} 0
+"120 /home/d/MPLABXProjects/Sumo_Beta.X/main.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"220
+} 0
+"30 /home/d/MPLABXProjects/Sumo_Beta.X/adc.c
+[v i1_adc_convert adc_convert `(v  1 e 1 0 ]
+{
+[v i1adc_convert@channel channel `uc  1 a 1 wreg ]
+[v i1adc_convert@channel channel `uc  1 a 1 wreg ]
+[v i1adc_convert@channel channel `uc  1 a 1 0 ]
+"33
+} 0
